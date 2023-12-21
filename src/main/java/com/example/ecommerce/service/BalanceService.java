@@ -14,7 +14,7 @@ public class BalanceService {
 
     public double getBalance(Long userId) {
         Optional<Balance> optionalBalance = balanceRepository.findById(userId);
-        return optionalBalance.map(Balance::getAmount).orElse(0.0);
+        return (double) optionalBalance.map(Balance::getAmount).orElse(0.0);
     }
 
     public void chargeBalance(Long userId, double amount) {

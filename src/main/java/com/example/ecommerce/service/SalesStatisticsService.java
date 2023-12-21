@@ -19,11 +19,11 @@ public class SalesStatisticsService {
     }
 
     public List<SalesStatistics> getTopProducts(int topN) {
-        // Implement logic to retrieve the top N products based on sales statistics
-        // ...
+        // 판매 통계를 기반으로 상위 N개 제품을 검색하는 논리 구현
+        //
 
         return salesStatisticsRepository.findTopNProducts(topN);
     }
 
-    // You can add more methods based on your specific requirements
+    // 추가 메서드 생성
 }

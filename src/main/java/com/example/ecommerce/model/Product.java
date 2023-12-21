@@ -14,5 +14,12 @@ public class Product {
     private double price;
     private int quantity; // Remaining quantity
 
+    public int getQuantity() {
+            return 0;
+    }
+
+    public void setQuantity(int max) {
+    }
+
     // Getter and Setter
 }

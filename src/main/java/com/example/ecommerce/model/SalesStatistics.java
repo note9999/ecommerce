@@ -16,5 +16,13 @@ public class SalesStatistics {
     private int quantitySold;
     private LocalDateTime timestamp;
 
+    public void setProductId(Long productId) {
+
+    }
+
+    public void setQuantitySold(int quantity) {
+
+    }
+
     // Getter and Setter
 }

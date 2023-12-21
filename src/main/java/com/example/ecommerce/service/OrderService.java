@@ -2,15 +2,16 @@ package com.example.ecommerce.service;
 
 import com.example.ecommerce.model.Balance;
 import com.example.ecommerce.model.Order;
+import com.example.ecommerce.model.Product;
 import com.example.ecommerce.model.SalesStatistics;
 import com.example.ecommerce.repository.BalanceRepository;
 import com.example.ecommerce.repository.OrderRepository;
 import com.example.ecommerce.repository.ProductRepository;
 import com.example.ecommerce.repository.SalesStatisticsRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.Optional;
 import java.util.concurrent.locks.Lock;
 
@@ -69,7 +70,7 @@ public class OrderService {
 
     private double getUserBalance(Long userId) {
         Optional<Balance> optionalBalance = balanceRepository.findById(userId);
-        return optionalBalance.map(Balance::getAmount).orElse(0.0);
+        return (double) optionalBalance.map(Balance::getAmount).orElse(0.0);
     }
 
     private boolean isProductInStock(Long productId, int quantity) {
@@ -83,10 +84,12 @@ public class OrderService {
         Optional<Balance> optionalBalance = balanceRepository.findById(userId);
         if (optionalBalance.isPresent()) {
             Balance balance = optionalBalance.get();
-            balance.setAmount(balance.getAmount() - amount);
+            double newAmount = balance.getAmount() - amount; // 두 값의 타입을 맞춤
+            balance.setAmount(newAmount);
             balanceRepository.save(balance);
         }
     }
+
 
     private void deductProductStock(Long productId, int quantity) {
         Optional<Product> optionalProduct = productRepository.findById(productId);
@@ -107,5 +110,8 @@ public class OrderService {
         salesStatistics.setQuantitySold(quantity);
 
         salesStatisticsRepository.save(salesStatistics);
+    }
+
+    public void placeOrder(Order order) {
     }
 }

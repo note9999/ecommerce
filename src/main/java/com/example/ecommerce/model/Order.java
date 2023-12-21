@@ -27,4 +27,20 @@ public class Order {
 
     // 추가: 주문에 대한 잠금을 위한 ReentrantLock
     private transient Lock orderLock = new ReentrantLock();
+
+    public void setUserId(Long userId) {
+
+    }
+
+    public void setProductId(Long productId) {
+
+    }
+
+    public void setQuantity(int quantity) {
+
+    }
+
+    public void setTotalPrice(double totalPrice) {
+
+    }
 }
