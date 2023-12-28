@@ -1,4 +1,10 @@
 package com.example.ecommerce.account.controller.response;
 
-public class ChargeBalanceResponse {
+import lombok.Builder;
+
+public record ChargeBalanceResponse(
+        Long accountId
+) {
+    @Builder
+    public ChargeBalanceResponse {}
 }

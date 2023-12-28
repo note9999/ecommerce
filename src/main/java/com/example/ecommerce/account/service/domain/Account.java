@@ -1,5 +1,6 @@
 package com.example.ecommerce.account.service.domain;
 
+import com.example.ecommerce.exception.CustomException;
 import lombok.Builder;
 import lombok.Getter;
 
