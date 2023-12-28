@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Slf4j
-@RestController
-@RequiredArgsConstructor
-public class AccountRestController {
-    private final AccountService accountService;
+    @Slf4j
+    @RestController
+    @RequiredArgsConstructor
+    public class AccountRestController {
+        private final AccountService accountService;
 
-    @GetMapping("/balance")
-    public ResponseEntity<?> findBalancesOf(@RequestHeader(name = "Authorization") Long memberId) {
+        @GetMapping("/balance")
+        public ResponseEntity<?> findBalancesOf(@RequestHeader(name = "Authorization") Long memberId) {
         List<Account> accounts = accountService.findBalanceOf(memberId);
         return ResponseEntity.ok(CommonResponse.ok(FindBalanceResponse.from(accounts)));
     }

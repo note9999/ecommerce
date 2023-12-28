@@ -1,4 +1,4 @@
 package com.example.ecommerce.member.service;
 
-public class MemberRepositoryImpl {
+public class MemberService {
 }

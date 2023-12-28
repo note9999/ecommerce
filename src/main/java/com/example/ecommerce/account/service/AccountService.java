@@ -2,7 +2,7 @@ package com.example.ecommerce.account.service;
 
 import com.example.ecommerce.account.service.component.MemberReader;
 import com.example.ecommerce.account.service.domain.Account;
-import com.example.ecommerce.member.service.domain.Member;
+import com.example.ecommerce.member.domain.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
