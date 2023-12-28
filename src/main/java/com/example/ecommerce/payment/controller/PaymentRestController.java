@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/payments")
 public class PaymentRestController {
 
-    //주문결제 ..
+
     //주문결제
     @PostMapping("/request")
     public ResponseEntity<?> requestPayments() {
