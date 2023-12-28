@@ -64,3 +64,5 @@ public class OrderEntity extends BaseTimeEntity {
             product.setOrder(this);
         }
     }
+
+}
