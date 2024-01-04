@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/orders")
 @RequiredArgsConstructor
 public class OrderRestController {
- // 수정 진행 중
+ // 잔디 오류 확인 중
     private final OrderService orderService;
 
     @PostMapping("/request")
