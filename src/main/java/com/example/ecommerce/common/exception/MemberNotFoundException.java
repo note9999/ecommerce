@@ -1,6 +1,6 @@
-package com.example.ecommerce.exception;
+package com.example.ecommerce.common.exception;
 
-import com.example.ecommerce.status.CustomExceptionStatus;
+import com.example.ecommerce.common.status.CustomExceptionStatus;
 
 import static com.example.ecommerce.status.CustomExceptionStatus.MEMBER_NOT_FOUND;
 

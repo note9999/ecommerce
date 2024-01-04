@@ -1,6 +1,5 @@
 package com.example.ecommerce.account.controller;
 
-import com.example.ecommerce.CommonResponse;
 import com.example.ecommerce.account.controller.request.BalanceChargeRequest;
 import com.example.ecommerce.account.controller.response.ChargeBalanceResponse;
 import com.example.ecommerce.account.controller.response.FindBalanceResponse;

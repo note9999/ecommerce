@@ -1,6 +1,5 @@
 package com.example.ecommerce.order.controller;
 
-import  com.example.ecommerce.CommonResponse;
 import  com.example.ecommerce.order.controller.request.OrderProductsRequest;
 import  com.example.ecommerce.order.controller.response.OrderProductsResponse;
 import  com.example.ecommerce.order.service.OrderService;

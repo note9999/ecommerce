@@ -1,6 +1,5 @@
 package com.example.ecommerce.order.repository.entity;
 
-import com.example.ecommerce.BaseTimeEntity;
 import com.example.ecommerce.order.status.OrderStatus;
 import com.example.ecommerce.order.service.domain.Order;
 import com.example.ecommerce.order.service.domain.OrderProduct;
@@ -16,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Entity
 @Table(name = "orders")
-public class OrderEntity extends BaseTimeEntity {
+public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

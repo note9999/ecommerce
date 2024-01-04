@@ -1,4 +1,4 @@
-package com.example.ecommerce.status;
+package com.example.ecommerce.common.status;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,5 @@
 package com.example.ecommerce.account.repository.entity;
 
-import  com.example.ecommerce.BaseTimeEntity;
 import  com.example.ecommerce.account.service.domain.Account;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -13,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(access = AccessLevel.PRIVATE) // 모든 필드를 매개변수로 받는 생성자 자동으로 생성, priviate으로 외부 생성자 호출 막음
 @Entity
 @Table(name = "account")
-public class AccountEntity extends BaseTimeEntity {
+public class AccountEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

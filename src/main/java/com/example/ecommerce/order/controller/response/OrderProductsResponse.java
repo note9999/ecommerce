@@ -1,4 +1,10 @@
 package com.example.ecommerce.order.controller.response;
 
-public class OrderProductsResponse {
+import lombok.Builder;
+
+public record OrderProductsResponse(
+        Long orderId
+) {
+    @Builder
+    public OrderProductsResponse {}
 }

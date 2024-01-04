@@ -1,4 +1,4 @@
-package com.example.ecommerce;
+package com.example.ecommerce.common;
 
 import com.example.ecommerce.status.CustomResponseStatus;
 

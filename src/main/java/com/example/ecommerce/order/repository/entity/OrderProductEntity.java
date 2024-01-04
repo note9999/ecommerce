@@ -1,6 +1,5 @@
 package com.example.ecommerce.order.repository.entity;
 
-import com.example.ecommerce.BaseTimeEntity;
 import com.example.ecommerce.order.service.domain.OrderProduct;
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Entity
 @Table(name = "order_product")
-public class OrderProductEntity extends BaseTimeEntity {
+public class OrderProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

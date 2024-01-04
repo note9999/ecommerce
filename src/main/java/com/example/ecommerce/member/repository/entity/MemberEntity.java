@@ -1,12 +1,11 @@
 package com.example.ecommerce.member.repository.entity;
 
-import com.example.ecommerce.BaseTimeEntity;
 import com.example.ecommerce.member.service.domain.Member;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "member")
-public class MemberEntity extends BaseTimeEntity {
+public class MemberEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
